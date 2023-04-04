@@ -1,5 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color:#FFFFFF;
+  --secondary-color:#E5E5E5;
+  --grey-light-color: #8D8D8D;
+  --blue-color:#334AC4;
+}
+
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--blue-color);
 }
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+
+
+
+
 
