@@ -4,18 +4,20 @@
   padding: 40px 15px;
   display: flex;
   align-items: center;
+  z-index: 1;
+  position: relative;
 }
 .filter-component{
   width: 100%;
 }
 
 .select-filter-component__placeholder{
-  color: var(--grey-light-color);
+  color: var(--gray-light-color);
 }
 
 .select-filter-component__control.css-13cymwt-control{
   width: 100%;
-  border: 1px solid var(--grey-light-color);
+  border: 1px solid var(--gray-light-color);
   border-radius: 4px;
   padding: 16px 0 14px 12px;
 }
@@ -25,6 +27,6 @@
 }
 
 .select-filter-component__indicator.select-filter-component__dropdown-indicator.css-1xc3v61-indicatorContainer{
-  color: var(--grey-light-color);
+  color: var(--gray-light-color);
   padding-right: 10px;
 }

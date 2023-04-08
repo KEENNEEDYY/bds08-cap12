@@ -3,6 +3,7 @@ import './App.css';
 import Filter from './components/filter';
 import Header from './components/header';
 import { Store } from './types/store';
+import SalesByGender from './components/sales-by-gender';
 
 const App = () => {
   const [controlComponentsData, setControlComponentsData] = useState<Store>();
@@ -12,9 +13,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    if (controlComponentsData) {
-      console.log(controlComponentsData);
-    }
+    console.log(controlComponentsData);
   }, [controlComponentsData]);
 
   return (
@@ -22,6 +21,11 @@ const App = () => {
       <Header />
       <div className="app-container">
         <Filter onChange={handleFilterChange} />
+        <SalesByGender
+          name="Sales by Genre"
+          labels={['Masculino', 'Feminino', 'Outro']}
+          series={[22, 20, 30]}
+        />
       </div>
     </>
   );

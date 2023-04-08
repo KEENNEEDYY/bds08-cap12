@@ -11,7 +11,7 @@ type Props = {
 const Filter = ({ onChange }: Props) => {
   const [selectStore, setSelectStore] = useState<Store[]>([]);
 
-  const handleChangeCategory = (value: Store) => {
+  const handleChangeStore = (value: Store) => {
     onChange(value);
   };
 
@@ -26,10 +26,11 @@ const Filter = ({ onChange }: Props) => {
       <div className="filter-component">
         {selectStore && (
           <Select
-            onChange={(value) => handleChangeCategory(value as Store)}
+            onChange={(value) => handleChangeStore(value as Store)}
             classNamePrefix="select-filter-component"
             options={selectStore}
             isClearable
+            placeholder="Selecione a loja"
             getOptionLabel={(store: Store) => store.name}
             getOptionValue={(store: Store) => String(store.id)}
           />

@@ -1,5 +1,6 @@
 .app-container{
   padding: 0 10px;
+  margin-bottom: 40px;
 }
 
 @media (min-width:576px) {
@@ -20,7 +21,9 @@
 
 @media (min-width: 1200px) {
   .app-container{
-    padding: 0 119px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
   }
 }
 
