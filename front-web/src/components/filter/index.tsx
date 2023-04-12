@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Store } from '../../types/store';
-import './styles.css';
 import Select from 'react-select';
 import { makeRequest } from '../../ultils/request';
+//
+import './styles.css';
 
 type Props = {
   onChange: (store: Store) => void;
 };
 
 const Filter = ({ onChange }: Props) => {
+  //
   const [selectStore, setSelectStore] = useState<Store[]>([]);
 
   const handleChangeStore = (value: Store) => {

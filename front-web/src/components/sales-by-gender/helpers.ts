@@ -1,4 +1,6 @@
 import { ApexOptions } from 'apexcharts';
+import { SalesByGender } from '../../types/sales-by-gender';
+import { formatGender, formatPrice } from '../../ultils/formatters';
 
 export const buildPieChartConfig = (labels: string[] = [], name: string) => {
   return {
@@ -15,7 +17,7 @@ export const buildPieChartConfig = (labels: string[] = [], name: string) => {
         fontFamily: 'Ubuntu, sans-serif'
       }
     },
-    colors: ['#3e82f7', '#ce4686', '#9b9999'],
+    colors: ['#ce4686', '#3e82f7', '#9b9999'],
     legend: {
       show: true,
       floating: false,
@@ -60,6 +62,27 @@ export const buildPieChartConfig = (labels: string[] = [], name: string) => {
     },
     chart: {
       height: '400px'
+    },
+    tooltip: {
+      y: {
+        formatter: function (value: number) {
+          return `${formatPrice(value)}`;
+        }
+      }
     }
   } as ApexOptions;
+};
+
+export const buildChartSeries = (salesByGender: SalesByGender[] = []) => {
+  return salesByGender.map(({ sum }) => sum);
+};
+
+export const buildChartLabels = (SalesByGender: SalesByGender[] = []) => {
+  return SalesByGender.map(({ gender }) => formatGender(gender));
+};
+
+export const sumSalesByGender = (salesByGender: SalesByGender[] = []) => {
+  return salesByGender.reduce((previousValue, currentValue) => {
+    return previousValue + currentValue.sum;
+  }, 0);
 };
