@@ -1,5 +1,4 @@
 import ReactApexChart from 'react-apexcharts';
-import './styles.css';
 import {
   buildChartLabels,
   buildChartSeries,
@@ -11,6 +10,8 @@ import { useEffect, useMemo, useState } from 'react';
 import { SalesByGender as SalesGender } from '../../types/sales-by-gender';
 import { buildFilterParams, makeRequest } from '../../ultils/request';
 import { formatPrice } from '../../ultils/formatters';
+//
+import './styles.css';
 
 type Props = {
   name: string;

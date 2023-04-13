@@ -30,7 +30,7 @@ export const buildPieChartConfig = (labels: string[] = [], name: string) => {
       fontSize: '16px'
     },
     dataLabels: {
-      enabled: false
+      enabled: true
     },
     plotOptions: {
       pie: {

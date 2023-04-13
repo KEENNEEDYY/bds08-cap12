@@ -1,23 +1,19 @@
-
 .filter-container{
-  margin: 10px 0 10px 0;
+  margin: 10px 0 0 0;
+  padding: 40px 15px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   z-index: 1;
   position: relative;
 }
 .filter-component{
-  margin: 40px 15px;
-  height: 50px;
-  width: 270px;
-  display: flex;
-  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .select-filter-component__control--is-focused{
   padding: 16px 0 14px 12px;
-  height: 50px;
+  height: 100%;
 }
 
 .select-filter-component__placeholder{
@@ -25,7 +21,7 @@
 }
 
 .select-filter-component__control.css-13cymwt-control{
-  width: 270px;
+  width: 100%;
   border: 1px solid var(--gray-light-color);
   border-radius: 4px;
   padding: 16px 0 14px 12px;
@@ -38,4 +34,17 @@
 .select-filter-component__indicator.select-filter-component__dropdown-indicator.css-1xc3v61-indicatorContainer{
   color: var(--gray-light-color);
   padding-right: 10px;
+}
+
+@media (min-width: 576px) {
+  .filter-container{
+    margin-top: 40px;
+    padding-left: 40px;
+  }
+  .filter-component{
+    max-width: 270px;
+  }
+  .select-filter-component__control--is-focused{
+    max-width: 270px;
+  }
 }

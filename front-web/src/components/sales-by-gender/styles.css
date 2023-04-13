@@ -1,4 +1,5 @@
 .sales-by-gender-container{
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   padding-top: 40px;
@@ -30,7 +31,53 @@
 .apexcharts-legend{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-left: 33% !important;
+}
+.apexcharts-legend-series{
+  margin-bottom: 16px !important;
+}
+.apexcharts-legend-text{
+  font-size: 18px !important;
+}
+
+.apexcharts-datalabels *{
+  font-size: 8px;
+}
+
+@media (min-width: 576px) {
+  .sales-by-gender-container{
+    margin-top: 40px;
+  }
+  .sales-by-gender-quantity-container{
+    margin-left: 40px;
+  }
+  .sales-by-gender-chart{
+    margin-top: 49px;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .sales-by-gender-container{
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sales-by-gender-chart{
+    margin-left: 200px !important;
+    padding-top: 63px;
+    padding-bottom: 63px;
+    margin: 0;
+  }
+  .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom{
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
 }
 
 
